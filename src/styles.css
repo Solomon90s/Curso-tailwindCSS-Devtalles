@@ -8,6 +8,10 @@
   h1 {
     @apply mb-2 text-3xl font-bold;
   }
+
+  button {
+    @apply cursor-pointer;
+  }
 }
 
 @layer components {

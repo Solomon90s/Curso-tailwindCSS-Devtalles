@@ -33,9 +33,11 @@
           type="email"
           id="email"
           placeholder="correo@ejemplo.com"
-          class="form-control"
+          class="form-control peer"
         />
-        <span class="text-sm text-pink-500">Ingresa un correo válido</span>
+        <span class="invisible text-sm text-pink-500 peer-invalid:visible"
+          >Ingresa un correo válido</span
+        >
       </div>
 
       <!-- Campo Password -->
@@ -47,9 +49,9 @@
           minlength="8"
           maxlength="16"
           placeholder="Mínimo 8 caracteres"
-          class="form-control"
+          class="form-control peer"
         />
-        <span class="text-sm text-pink-500"
+        <span class="invisible text-sm text-pink-500 peer-invalid:visible"
           >Ingresa una contraseña válida de entre 8 y 16 caracteres</span
         >
       </div>
@@ -58,7 +60,7 @@
       <div class="flex justify-end">
         <button
           type="submit"
-          class="rounded-md bg-sky-500 px-6 py-3 font-semibold text-white transition-colors"
+          class="rounded-md bg-sky-500 px-6 py-3 font-semibold text-white transition-colors hover:bg-sky-600 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:outline-none"
         >
           Save changes
         </button>
