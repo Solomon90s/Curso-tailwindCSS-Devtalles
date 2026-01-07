@@ -22,15 +22,17 @@
         <li class="flex items-center gap-4">
           <label
             for="task-1"
-            class="text-slate-40 flex flex-1 cursor-pointer items-center gap-4 text-lg"
+            class="peer text-slate-40 flex flex-1 cursor-pointer items-center gap-4 text-lg"
           >
             <input
               type="checkbox"
               id="task-1"
               checked
-              class="relative h-6 w-6 cursor-pointer appearance-none rounded border-2 border-slate-600 checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-sm checked:after:text-white checked:after:content-['✓']"
+              class="peer relative h-6 w-6 cursor-pointer appearance-none rounded border-2 border-slate-600 checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-sm checked:after:text-white checked:after:content-['✓']"
             />
-            <span class="flex-1 transition-all duration-300 ease-in-out">
+            <span
+              class="flex-1 transition-all duration-300 ease-in-out peer-checked:line-through"
+            >
               Crear una lista de tareas
             </span>
           </label>
@@ -52,14 +54,16 @@
         <li class="flex items-center gap-4">
           <label
             for="task-2"
-            class="text-slate-40 flex flex-1 cursor-pointer items-center gap-4 text-lg"
+            class="peer text-slate-40 flex flex-1 cursor-pointer items-center gap-4 text-lg"
           >
             <input
               type="checkbox"
               id="task-2"
-              class="relative h-6 w-6 cursor-pointer appearance-none rounded border-2 border-slate-600 checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-sm checked:after:text-white checked:after:content-['✓']"
+              class="peer relative h-6 w-6 cursor-pointer appearance-none rounded border-2 border-slate-600 checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-sm checked:after:text-white checked:after:content-['✓']"
             />
-            <span class="flex-1"> Aprender sobre selectores de hermanos </span>
+            <span class="flex-1 peer-checked:line-through">
+              Aprender sobre selectores de hermanos
+            </span>
           </label>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -79,14 +83,16 @@
         <li class="flex items-center gap-4">
           <label
             for="task-3"
-            class="text-slate-40 flex flex-1 cursor-pointer items-center gap-4 text-lg"
+            class="peer text-slate-40 flex flex-1 cursor-pointer items-center gap-4 text-lg"
           >
             <input
               type="checkbox"
               id="task-3"
-              class="relative h-6 w-6 cursor-pointer appearance-none rounded border-2 border-slate-600 checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-sm checked:after:text-white checked:after:content-['✓']"
+              class="peer relative h-6 w-6 cursor-pointer appearance-none rounded border-2 border-slate-600 checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-sm checked:after:text-white checked:after:content-['✓']"
             />
-            <span class="flex-1"> Compartir mi lista con amigos </span>
+            <span class="flex-1 peer-checked:line-through">
+              Compartir mi lista con amigos
+            </span>
           </label>
           <svg
             xmlns="http://www.w3.org/2000/svg"
