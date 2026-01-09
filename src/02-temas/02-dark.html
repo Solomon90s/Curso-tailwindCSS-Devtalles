@@ -15,7 +15,7 @@
     <div class="mt-10 flex gap-8">
       <!-- Tarjeta Modo Light -->
       <div
-        class="flex-1 rounded-lg border border-slate-200 bg-white p-6 text-slate-900 shadow-lg transition-colors"
+        class="flex-1 rounded-lg border border-slate-200 bg-white p-6 text-slate-900 shadow-lg transition-colors dark:border-slate-700 dark:bg-slate-800"
       >
         <div class="mb-4 flex items-center">
           <svg
@@ -43,9 +43,11 @@
               <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
             </g>
           </svg>
-          <h2 class="text-xl font-semibold text-slate-900">Modo Light</h2>
+          <h2 class="text-xl font-semibold text-slate-900 dark:text-white">
+            Modo Light
+          </h2>
         </div>
-        <p class="text-slate-700">
+        <p class="text-slate-700 dark:text-white/80">
           Este es un ejemplo de tarjeta en modo
           <span class="font-bold">claro (light)</span>. El fondo es claro y el
           texto oscuro. El icono representa el sol.
@@ -54,7 +56,7 @@
 
       <!-- Tarjeta Modo Dark -->
       <div
-        class="flex-1 rounded-lg border border-slate-700 bg-slate-800 p-6 text-white shadow-lg transition-colors"
+        class="flex-1 rounded-lg border border-slate-700 bg-slate-800 p-6 text-white shadow-lg transition-colors dark:border-slate-200 dark:bg-white dark:text-slate-950"
       >
         <div class="mb-4 flex items-center">
           <svg
@@ -70,9 +72,11 @@
               stroke="currentColor"
             />
           </svg>
-          <h2 class="text-xl font-semibold text-white">Modo Dark</h2>
+          <h2 class="text-xl font-semibold text-white dark:text-slate-950">
+            Modo Dark
+          </h2>
         </div>
-        <p class="text-slate-300">
+        <p class="text-slate-300 dark:text-slate-950">
           Este es un ejemplo de tarjeta en modo
           <span class="font-bold">oscuro (dark)</span>. El fondo es oscuro y el
           texto claro. El icono representa la luna.
@@ -82,8 +86,8 @@
 
     <h1>
       Actualmente:
-      <span>Tema Light</span>
-      <span>Tema Dark</span>
+      <span class="block dark:hidden">Tema Light</span>
+      <span class="hidden dark:block">Tema Dark</span>
     </h1>
 
     <button
@@ -100,6 +104,20 @@
     <script>
       // Todo: Agregar botón para cambiar tema aquí:
       // Docs: https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches),
+      );
+
+      document.querySelector("#theme-toggle").addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        localStorage.theme = document.documentElement.classList.contains("dark")
+          ? "dark"
+          : "light";
+      });
     </script>
   </body>
 </html>

@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+
 @layer base {
   body {
     @apply bg-slate-800 p-8 px-4 py-2 text-white;
